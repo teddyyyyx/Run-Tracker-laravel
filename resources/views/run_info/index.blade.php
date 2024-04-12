@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/main.css" rel="stylesheet">
-</head>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></head> -->
 <body>
-    <h1>Hello World </h1>
 
-    <nav>
-
+    <nav class="nav-bar">
+        <h1>Run Tracker Crud Benz </h1>
     </nav>
 
     <main class="main-container">
 
         <div class="tracker-table">
           <h2>Run Track</h2>
-
+    
             <table border="1px solid black">
                 <tr>
                     <th>Date</th>
-                    <th>Distance</th>
+                    <th>Distance (km)</th>
                     <th>Time</th>
                     <th>Shoes</th>
+                    <th>Edit</th>
                     <th>Delete</th>
+                    
                 </tr>
                 
                 @foreach($run_infos as $run_info)
@@ -68,23 +69,23 @@
                 @csrf
                 @method('post')
                 <div>
-                    <input type="date" placeholder="Date" name="date">
+                    <input class="input-class" type="date" placeholder="Date" name="date">
                     <label for="date"></label>
                 </div>
                 <div>
-                    <input type="text" placeholder="Distance" name="distance">
+                    <input class="input-class"  type="text" placeholder="Distance" name="distance">
                     <label for=""></label>
                 </div>
                 <div>
-                    <input type="text" placeholder="Time" name="time">
+                    <input class="input-class"  type="text" placeholder="Time" name="time">
                     <label for=""></label>
                 </div>
                 <div>
-                    <input type="text" placeholder="Shoes Worn" name="shoes">
+                    <input class="input-class"  type="text" placeholder="Shoes Worn" name="shoes">
                     <label for=""></label>
                 </div>
 
-                <div>
+                <div class="button-class">
                     <input type="submit" value="Add Run">
                 </div>
             </form>

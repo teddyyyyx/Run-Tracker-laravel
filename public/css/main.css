@@ -1,5 +1,7 @@
 body{
     background-color: rgba(242, 242, 242, 1);
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -8,19 +10,46 @@ body{
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    align-items: center;
+    padding-top: 20px;
 }
 
 .tracker-table{
     background-color: white;
     padding: 20px;
+    border-radius: 15px;
 }
 
 .add-run-container{
     background-color: white;
     padding: 20px;
+    border-radius: 15px;
+
 }
 
 td, th{
     padding: 10px;
     text-align: center;
+}
+
+.nav-bar > h1{
+    background-color: white;
+    padding: 25px;
+    margin: 0;
+}
+
+.input-class{
+    border-radius: 20px;
+    padding: 8px;
+    margin: 10px;
+}
+
+.button-class{
+    display: flex;
+    justify-content: end;
+}
+
+.button-class > input{
+    border-radius: 20px;
+    padding: 5px 10px;
 }
