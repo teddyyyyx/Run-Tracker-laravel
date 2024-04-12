@@ -14,9 +14,10 @@
     </nav>
 
     <main class="main-container">
-        <h2>Run Track</h2>
 
         <div class="tracker-table">
+          <h2>Run Track</h2>
+
             <table border="1px solid black">
                 <tr>
                     <th>Date</th>
@@ -25,12 +26,18 @@
                     <th>Shoes</th>
                 </tr>
                 
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
+                @foreach($run_infos as $run_info)
+                    <tr>
+                        <td>{{$run_info->date}}</td>
+                        <td>{{$run_info->distance}}</td>
+                        <td>{{$run_info->time}}</td>
+                        <td>{{$run_info->shoes}}</td>
+                        <td>
+                            <a href="{{route('run_info.edit', ['run_info' => $run_info])}}">Edit</a>
+                        </td>
+                    </tr>
+
+                @endforeach
 
             </table>
 
@@ -38,7 +45,7 @@
                 <input type="submit" value="Delete">
             </form>
         </div>
-
+<br>
 
         <div class="add-run-container">
             <h2>Enter Run Details</h2>

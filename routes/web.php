@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/run_info', [RunInfoController::class, 'index'])->name('run_info.index');
 Route::post('/run_info', [RunInfoController::class, 'store_info'])->name('run_info.store_info');
+Route::get('/run_info/{run_info}/edit', [RunInfoController::class, 'edit'])->name('run_info.edit');
+Route::put('/run_info/{run_info}/update', [RunInfoController::class, 'update'])->name('run_info.update');

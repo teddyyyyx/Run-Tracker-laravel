@@ -2,10 +2,25 @@ body{
     background-color: rgba(242, 242, 242, 1);
 }
 
-.tracker-table-container{
-    border: 1px solid black;
-}
 
 .main-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tracker-table{
     background-color: white;
+    padding: 20px;
+}
+
+.add-run-container{
+    background-color: white;
+    padding: 20px;
+}
+
+td, th{
+    padding: 10px;
+    text-align: center;
 }
