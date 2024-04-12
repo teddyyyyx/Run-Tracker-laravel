@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(242, 242, 242, 1);
+}
+
+.tracker-table-container{
+    border: 1px solid black;
+}
+
+.main-container{
+    background-color: white;
+}

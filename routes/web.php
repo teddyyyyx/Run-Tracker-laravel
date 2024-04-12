@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RunInfoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/run_info', [RunInfoController::class, 'index'])->name('run_info.index');
+Route::post('/run_info', [RunInfoController::class, 'store_info'])->name('run_info.store_info');
