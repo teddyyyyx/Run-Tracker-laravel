@@ -42,6 +42,7 @@ td, th{
     border-radius: 20px;
     padding: 8px;
     margin: 10px;
+    width: 80%;
 }
 
 .button-class{
@@ -52,4 +53,20 @@ td, th{
 .button-class > input{
     border-radius: 20px;
     padding: 5px 10px;
+}
+
+.edit-body{
+    background-color: rgba(242, 242, 242, 1);
+    align-items: center;
+
+}
+.edit-container{
+    display: flex;
+    justify-content: center;
+}
+.edit-run-container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    padding: 20px;
 }
