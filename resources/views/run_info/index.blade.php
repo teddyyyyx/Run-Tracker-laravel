@@ -24,6 +24,7 @@
                     <th>Distance</th>
                     <th>Time</th>
                     <th>Shoes</th>
+                    <th>Delete</th>
                 </tr>
                 
                 @foreach($run_infos as $run_info)
@@ -35,18 +36,22 @@
                         <td>
                             <a href="{{route('run_info.edit', ['run_info' => $run_info])}}">Edit</a>
                         </td>
+                        <td>
+                            <form method="post"  action="{{route('run_info.destroy', ['run_info' => $run_info])}}">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" value="Delete"> 
+                            </form>
+                        </td>
                     </tr>
 
                 @endforeach
 
             </table>
 
-            <form action="">
-                <input type="submit" value="Delete">
-            </form>
+          
         </div>
-<br>
-
+        
         <div class="add-run-container">
             <h2>Enter Run Details</h2>
             <div>

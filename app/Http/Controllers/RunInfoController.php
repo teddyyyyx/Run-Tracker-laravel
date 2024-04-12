@@ -49,6 +49,11 @@ class RunInfoController extends Controller
 
         return redirect(route('run_info.index'))->with('sucsess', 'Product Updated Successfully');
     }
+
+    public function destroy(Run_Info $run_info){
+        $run_info->delete();
+        return redirect(route('run_info.index'))->with('success', 'Product Deleted Successfully');
+    }
 }
 
 
